@@ -1,9 +1,10 @@
-import { Deal } from './models/Deal.js';
-
-var deal = new Deal(new Date(), 10, 100);
-
-console.log(deal.volume);
-console.log(deal.date);
+import { NegotiationController } from './controllers/negotiation-controller.js';
 
 
-alert('oi')
+const controller = new NegotiationController();
+
+const form = document.querySelector('.form')
+form.addEventListener('submit', (event) => {
+   event.preventDefault();
+   controller.add();
+})

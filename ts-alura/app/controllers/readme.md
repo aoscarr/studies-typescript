@@ -1,0 +1,1 @@
+# param de metodo, param de construtor, prop de uma classe, adicione o tipo, mesmo que seja any/void.
