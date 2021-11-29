@@ -1,23 +1,19 @@
 export class Deal {
-   #date;
-   #quantity;
-   #value;
-
-   constructor(date, quantity, value) {
-      this.#date = date;
-      this.#quantity = quantity;
-      this.#value = value;
-   }
-   get date() {
-      return this.#date;
-   }
-   get value() {
-      return this.#value;
-   }
-   get quantity() {
-      return this.#quantity;
-   }
-   get volume() {
-      return this.#quantity * this.#value;
-   }
+    constructor(date, quantity, value) {
+        this._date = date;
+        this._quantity = quantity;
+        this._value = value;
+    }
+    get date() {
+        return this._date;
+    }
+    get value() {
+        return this._value;
+    }
+    get quantity() {
+        return this._quantity;
+    }
+    get volume() {
+        return this._quantity * this._value;
+    }
 }
