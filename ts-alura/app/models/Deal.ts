@@ -1,22 +1,18 @@
 export class Deal {
-   private _date: Date;
-   private _quantity: number;
-   private _value: number;
+   
+   constructor(
+      private _date: Date,
+      public readonly _quantity: number,
+      public readonly _value: number)
+   {}
+   
+   get date(): Date{
+      /* applying defensive programming to prevent the dev from changing the date value. 
+      I pass the property by copying and not by reference.*/
+      const date = new Date(this._date.getTime())
+      return date;
+   }
 
-   constructor(date: Date, quantity: number, value: number) {
-      this._date = date;
-      this._quantity = quantity;
-      this._value = value;
-   }
-   get date(): Date {
-      return this._date;
-   }
-   get value(): number {
-      return this._value;
-   }
-   get quantity(): number {
-      return this._quantity;
-   }
    get volume(): number {
       return this._quantity * this._value;
    }
