@@ -18,7 +18,7 @@ export class DealsView {
             .map((deal) => {
             return `
                      <tr>
-                        <td>?</td>
+                        <td>${new Intl.DateTimeFormat().format(deal.date)}</td$>
                         <td>${deal._quantity}</td>
                         <td>${deal._value}</td>
                      </tr>
